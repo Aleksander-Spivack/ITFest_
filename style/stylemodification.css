@@ -50,3 +50,22 @@ font-weight: 300;
 color:rgb(255, 239, 10);
 border-bottom:1px dotted rgb(22, 236, 3);
 }
+
+.images  {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.images img {
+    width: 25%;
+
+}
+
+
+.logo img {
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 0 auto;
+    display: block;
+}

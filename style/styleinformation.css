@@ -50,3 +50,79 @@ font-weight: 300;
 color:rgb(255, 239, 10);
 border-bottom:1px dotted rgb(22, 236, 3);
 }
+
+.images  {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.images img {
+    width: 25%;
+
+}
+
+
+.logo img {
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 0 auto;
+    display: block;
+}
+
+
+.contanier-text{
+    width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+
+}
+
+.text{
+    text-align: justify;
+    font-size: 28px;
+    background-color: rgb(114, 18, 158);
+    line-height: 1.2;
+    box-shadow: -8px 0 0 1px rgb(231, 2, 220), 8px 0 0 1px rgb(231, 2, 220);
+    color: rgb(27, 206, 191);
+}
+
+.text-ie-level-02{
+   
+    background-color: rgb(114, 18, 158);
+    padding: 1px 0;
+    line-height: 1.2;
+}
+
+.text-ie{
+    
+    
+    left: -.5em;
+
+}
+
+
+.heading{
+    text-align: center;
+    font-size: 22px;
+    background-color: rgb(114, 18, 158);
+    line-height: 1.2;
+    box-shadow: -8px 0 0 1px rgb(231, 2, 220), 8px 0 0 1px rgb(231, 2, 220);
+    color: rgb(27, 206, 191);
+}
+
+.heading-ie-level-02{
+   
+    background-color: rgb(114, 18, 158);
+    padding: 1px 0;
+    line-height: 1.2;
+}
+
+.heading-ie{
+    
+    
+    left: -.5em;
+
+}
