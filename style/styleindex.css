@@ -8,49 +8,13 @@ font-family: Bitter-BoldItalic;
 }
 
 
+
 @font-face {
 	font-family: 'Bitter-BoldItalic'; 
 	src: url(../font/Bitter-BoldItalic.ttf); 
 }
 
  
-.menu li
-{
-float:left;
-list-style: none;
-margin:5px 35px ;
-}
-
-.menu
-{
-margin:0 auto;
-display:table;
-}
-
-.blok-menu
-{
-overflow: hidden;
-background: rgb(54, 31, 31);
-box-shadow: 0px 13px 17px -6px #53e60f;
-}
-
-.menu li a
-{
-
-font-weight: 300;
-font-size: 18px;
-color:rgb(148, 21, 221);
-text-decoration: none;
-}
-.menu li a:hover
-{
-
-font-size: 18px;
-font-weight: 300;
-color:rgb(255, 239, 10);
-border-bottom:1px dotted rgb(22, 236, 3);
-}
-
 
 .images  {
     display: flex;
@@ -74,17 +38,16 @@ border-bottom:1px dotted rgb(22, 236, 3);
 
 .btn-group
 {
-    display: block;
-margin: 0;
-display:table;
-margin: 70px;
+ margin-top: 100px;
+
 }
 
-.btn-group
+.btn-group button
 {
-float:right;
-list-style: none;
-margin:0 auto ;
+    margin-top: 150px;
+    float:right;
+    list-style: none;
+    margin:0 auto ;
 }
 
 
@@ -100,6 +63,7 @@ margin:0 auto ;
     margin-left: auto;
     margin-right: auto;
     margin-top: 200px;
+    margin-bottom: -150px;
 
 }
 
@@ -148,4 +112,33 @@ margin:0 auto ;
     
     left: -.5em;
 
+}
+
+.Button a{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    margin-top: 200px;
+    margin-bottom: 150px;
+    width: 200px;
+    height: 50px;
+
+}
+
+
+@media (min-width: 576px){
+.modal-dialog {
+    max-width: 500px !important;
+    margin: 1.75rem auto !important;
+
+}
+}
+
+.mods{
+    display: flex;
+    justify-content: center;
+}
+
+.mod{
+    padding: 100px auto;
 }
