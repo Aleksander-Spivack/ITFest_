@@ -170,11 +170,7 @@ font-family: Bitter-BoldItalic;
 
     position: absolute;
     overflow: hidden;
-    top: 160px;
-    left: 90px;
-    padding: 10px;
     text-align: center;
-
     display: inline-block;
     text-decoration: none;
     padding: 7px 14px;
@@ -182,11 +178,15 @@ font-family: Bitter-BoldItalic;
     color: #fff;
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
+    bottom: 5px;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
 }
    
 
 .mod a:hover {
-    background: #00ff15;
+    background: #00b30fab;
    }
    
 .mod a {
@@ -223,19 +223,35 @@ font-family: Bitter-BoldItalic;
     left: 0;   
     z-index: 9999;   
     width: 8%;   
-    height: 50px
+    height: 50px;
+    
 }
+
+.navbar-example2 a{
+    color: crimson !important;
+}
+
+
+.navbar {
+    position: fixed !important;
+    display: flex;
+    top: 0;
+    width: 100% !important;
+  }
 
 /* Стиль галереи */
 .contenier-image {
-    width: 60%;
+    width: 45%;
     display: flex;
     justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
+    justify-content: space-between;
 
 }   
-    
+
+.text-img{
+    margin-top: -45px;
+}
 
 #statya:hover img { 
     width:500px;
@@ -245,11 +261,10 @@ font-family: Bitter-BoldItalic;
 }
 
 .effects img{
-    display: block;
-    margin-left:  0px auto !important;
-    margin-right:  0px auto !important;
-    padding: 150px;
-    margin-bottom: -180px !important;
+    margin: 30px auto ;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 
@@ -257,9 +272,8 @@ font-family: Bitter-BoldItalic;
    .effects  div {
 
     color: rgba(255, 255, 255, 0.568);
-    top: 0;
+    top: -160px;
     left: 50px;
-    padding: 10px;
     text-align: center;
    }
    
@@ -269,10 +283,34 @@ font-family: Bitter-BoldItalic;
 
     transition: all 0.4s ease-in-out;
 
-    transform: translate(500px, 0px) rotate(0deg);
+    transform: translate(250px, 0px) rotate(0deg);
    }
    
    .effects:hover div {
     opacity: 1;
     transform: translate(0px, 0px) rotate(0deg);
    }
+
+
+   .menu2 {
+       position: fixed;
+   }
+
+   @media (max-width: 990px) {
+       .menu1 {
+           display: none;
+       }
+
+       .menu2 {
+           display: flex;
+       }
+   }
+   @media (min-width: 991px) {
+    .menu2 {
+        display: none !important;
+    }
+
+    .menu1 {
+        display: block;
+    }
+}

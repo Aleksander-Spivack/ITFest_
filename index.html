@@ -25,7 +25,7 @@
     <body data-bs-spy="scroll" data-bs-target="#navbar-example">
         
             
-
+<!-------- Логотип сайта --------->
 
         <div class="images">
             <img class="image_1" src="image/logo_2.png">
@@ -38,8 +38,8 @@
                 <img src="image/logo.png">
             </div>
 
-
-            <nav class="fixed-nav-bar"> 
+<!---------- Панель навигации ---------->
+            <nav class="fixed-nav-bar menu1"> 
                     <nav id="navbar-example">
                         <p class="navbar-brand">Панель навигации</p>
                         <nav class="nav nav-pills flex-column">
@@ -53,6 +53,29 @@
                     </nav>
             </nav>
 
+            <!--   -->
+            <nav id="navbar-example2" class="navbar navbar-light px-3 menu2">
+                <ul class="nav nav-pills">
+                  <li class="nav-item">
+                    <a class="nav-link" style ="color: rgba(238, 255, 0, 0.856);" href="#item-0">Введение</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" style ="color: rgba(238, 255, 0, 0.856);" href="#item-1">Информация</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" style ="color: rgba(238, 255, 0, 0.856);" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Выпадающий список</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item"  href="#item-2">Модификации</a></li>
+                      <li><a class="dropdown-item"  href="#item-3">Галерея</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item"  href="#item-4">Таблица</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+
+               <!--   -->
+
               <script>
                 var scrollSpy = new bootstrap.ScrollSpy(document.body, {
                 target: '#navbar-example'
@@ -64,7 +87,7 @@
 
             <div class="contanier-text">
                 
-
+<!------------ Текст для сайта ---------------->
                 <div class="heading">
 
                     <h1 class="heading-ie" id="item-0">
@@ -258,7 +281,7 @@
 
             
             
-            
+<!---------- кнопки для модального окна  ----------->            
             <div class="mods">
                 <div class="mod">
                     <img src="image/IC_2.jpg" alt="Industrial_craft" />
@@ -367,7 +390,7 @@
             <!-- Modal end -->
 
             
-
+<!------------ JS для модального окна ---------->  
             <script>
                 function IC_2(param) {
                     var button_1 = document.querySelector('button')
@@ -492,17 +515,18 @@
 
         </div>
 
+<!------------ Галерея ---------->  
         <div class="contenier-image">
             <div class="effects" id="statya">
                 <img src="image/index.jpg" data-bs-toggle="tooltip" alt="">
-                <div>
+                <div class ="text-img">
                     <p>geektarget.ru</p>
                 </div>
             </div>
             
             <div class="effects" id="statya">
                 <img src="image/skyland.jpg" data-bs-toggle="tooltip" alt="">
-                <div>
+                <div class ="text-img">
                     <p>victorycraft.ru</p>
                 </div>
             </div>
@@ -511,14 +535,14 @@
         <div class="contenier-image">
             <div class="effects" id="statya">
                 <img src="image/order_mc_img10.jpg" data-bs-toggle="tooltip" alt="">
-                <div>
+                <div class ="text-img">
                     <p>myarena.ru</p>
                 </div>
             </div>
             
             <div class="effects" id="statya">
                 <img src="image/order_mc_img7.jpg" data-bs-toggle="tooltip" alt="">
-                <div>
+                <div class ="text-img">
                     <p>myarena.ru</p>
                 </div>
             </div>
@@ -527,14 +551,14 @@
         <div class="contenier-image">
             <div class="effects" id="statya">
                 <img src="image/order_mc_img8.jpg" data-bs-toggle="tooltip" alt="">
-                <div>
+                <div class ="text-img">
                     <p>myarena.ru</p>
                 </div>
             </div>
             
             <div class="effects" id="statya">
                 <img src="image/order_mc_img9.jpg" data-bs-toggle="tooltip" alt="">
-                <div>
+                <div class ="text-img">
                     <p>myarena.ru</p>
                 </div>
             </div>
@@ -557,7 +581,7 @@
             </div>
         </div>
 
-        
+ <!------------ Информация о партнерах ---------->       
         <div class="contanier-text">
             <div class="heading">
                 <h1 class="heading-ie" >
