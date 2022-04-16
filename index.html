@@ -9,6 +9,7 @@
                 background-size: 100%;
                 background-attachment: fixed;
                 
+                position: relative;
             }
            </style>
 
@@ -21,30 +22,53 @@
            
         
     </head>
-    <body>
+    <body data-bs-spy="scroll" data-bs-target="#navbar-example">
         
+            
 
 
-
-            <div class="images">
-                <img class="image_1" src="image/logo_2.png">
+        <div class="images">
+            <img class="image_1" src="image/logo_2.png">
                 
-                <img class ="image_2" src="image/logo_1.png">
+            <img class ="image_2" src="image/logo_1.png">
                
-            </div>
+        </div>
 
             <div class="logo">
                 <img src="image/logo.png">
             </div>
 
 
+            <nav class="fixed-nav-bar"> 
+                    <nav id="navbar-example">
+                        <p class="navbar-brand">Панель навигации</p>
+                        <nav class="nav nav-pills flex-column">
+                        <a class="nav-link" href="#item-0">Введение</a>
+                          <a class="nav-link" href="#item-1">Информация</a>
+                          <a class="nav-link" href="#item-2">Модификации</a>
+                          <a class="nav-link" href="#item-3">Галерея</a>
+                          <a class="nav-link" href="#item-4">Таблица</a>
+
+                        </nav>
+                    </nav>
+            </nav>
+
+              <script>
+                var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+                target: '#navbar-example'
+                })
+                var scrollSpyContentEl = document.getElementById('content')
+                var scrollSpy = bootstrap.ScrollSpy.getInstance(scrollSpyContentEl)
+
+              </script>
+
             <div class="contanier-text">
                 
 
                 <div class="heading">
 
-                    <h1 class="heading-ie">
-                        <span class="heading-ie-level-02">
+                    <h1 class="heading-ie" id="item-0">
+                        <span class="heading-ie-level-02" >
 
                         <span>Первый сервер в Minecraft с оброзовательным киберспортом!!!</span>
 
@@ -99,7 +123,7 @@
                             </span>
 
                         </p>
-
+                    
                         <div class="heading">
 
                             <h2 class="heading-ie">
@@ -116,17 +140,20 @@
                             <span class="text-ie-level-02">
 
                                     На данном сайте можно узнать всю информацию по этому серверу в Minecraft.
-                                <li><a href="information.html">Информация о сервере, его особеностях</a></li> -
-                                в этом блоке вы узнаете все особенности Minecraft сервера и его информацию. Примерную дату его выхода на свет.
+                                <p>
+                                    Во вкладке информация - в этом блоке вы узнаете все особенности Minecraft сервера и его информацию. Примерную дату его выхода на свет.
+                                </p>
 
-                                <li><a href="modification.html">Модификации</a></li>
-                                - а здесь вы узнаете какие модификации нужны для этого сервера. Здесь расписано как установить, для чего они нужны на данном сервере
+                                <p>
+                                    Во вкладке модификации - а здесь вы узнаете какие модификации нужны для этого сервера. Здесь расписано как установить, для чего они нужны на данном сервере
+                                </p> 
+                               <p>
+                                   Во вкладке галерея - в данном блоке вы можете сами посмотреть тематику и сооружения на этом Minecraft сервер
+                                </p>
 
-                                <li><a href="gallery.html">Галерея</a></li>
-                                - в данном блоке вы можете сами посмотреть тематику и сооружения на этом Minecraft сервер
-
-                                <li><a href="rating.html">Рейтинговая таблица</a></li>
-                                - в таблице можно посмотреть к уже участвует в Beta-test Minecraft сервере 
+                                <p>
+                                   Во вкладке таблица - в таблице можно посмотреть к уже участвует в Beta-test Minecraft сервере 
+                                </p>
 
                             </span>
                             
@@ -137,7 +164,7 @@
 
             <div class="contanier-text">
             <div class="heading">
-                <h1 class="heading-ie">
+                <h1 class="heading-ie" id="item-1">
                     <span>
 
                         Основная информация о сервере Minecraft
@@ -220,29 +247,33 @@
         
         <div class="contanier-text">
             <div class="heading">
-                <h1 class="heading-ie">
+                <h1 class="heading-ie" id="item-2">
                     <span>
 
-                        Модификации для сервера
+                        Модификации для сервера:
                         
                     </span>
                 </h1>
             </div>
 
-
+            
+            
             
             <div class="mods">
                 <div class="mod">
                     <img src="image/IC_2.jpg" alt="Industrial_craft" />
-                    <button class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button_1" onclick="IC_2(1)">Информация по моду</button>
+                    <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button" onclick="IC_2(1)">Подробней о моде</a>
+
                 </div>
                 <div class="mod">
-                    <img src="" alt="Immersive Engineering" />
-                    <button class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="buttoт_2" onclick="IE(2)">Информация по моду</button>
+                    <img src="image/IE.png" alt="Immersive Engineering" />
+                    <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="buttoт" onclick="IE(2)">Подробней о моде</a>
+
                 </div>
                 <div class="mod">
-                    <img src="" alt="" />
-                    <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button_3">Информация по моду</a>
+                    <img src="image/BC.jpg" alt="BuildCraft" />
+                    <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button" onclick="BC(3)">Подробней о моде</a>
+
                 </div>
 
             </div>
@@ -250,58 +281,47 @@
 
             <div class="mods">
                 <div class="mod">
-                    <img src="" alt="" />
-                    <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Информация по моду</a>
-                </div>
-                <div class="mod">
-                    <img src="" alt="" />
-                    <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Информация по моду</a>
-                </div>
-                <div class="mod">
-                    <img src="" alt="" />
-                    <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Информация по моду</a>
-                </div>
+                    <img src="image/TE.jpg" alt="Thermal Expansion"/>
+                    <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button" onclick="TE(4)">Подробней о моде</a>
 
+                </div>
+                <div class="mod">
+                    <img src="image/GC.jpg" alt="Galacticraft" />
+                    <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button" onclick="GC(5)">Подробней о моде</a>
+
+                </div>
+                <div class="mod">
+                    <img src="image/JEI.jpg" alt="Just Enough Items (JEI)" />
+                    <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button" onclick="JEI(6)">Подробней о моде</a>
+                </div>
             </div>
-                    
-            <div class="btn-group" role="group" aria-label="Button group with nested dropdown" >
-                <button id="btnGroupDrop1" type="button" class="btn btn-primary" aria-expanded="false">
-                    Новости проект
-                </button>
-              
                 
-                <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                Контакты партнеров
-                </button>
-                  <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                    <li><a class="dropdown-item" href="https://vk.com/FEDCDOMinecraft">VK</a></li>
-                    <li><a class="dropdown-item" href="https://t.me/FEDCDOMinecraft">Telegramm</a></li>
-                    <li><a class="dropdown-item" href="https://discord.gg/8kpuuzG4jU">Discord</a></li>
-                  </ul>
-            </div>
+            
+            
+            
 
-            <!-- Modal start -->
+          
+            <!-- Modal start 1 -->
             <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
                 <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
-                    <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalToggleLabel"> Industrial Craft 2</h5>
+                    <div class="modal-header  modal-title">
+                    <h5 class="modal-title" id="exampleModalToggleLabel"></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body modal-1-text">
-                        <p>Большой и старый технический мод, который дарит игроку множество работающих на электричестве механизмов для 
-                        самых разных сфер игровой жизни, включая добычу руд, обработку ресурсов и  управление сельским хозяйством.</p>
+                        <p></p>
                         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
                               <div class="carousel-item active">
-                                <img src="image/IC_2 (1).jpg" class="img_1">
+                                <img src="#" class="img_1">
                               </div>
                               <div class="carousel-item">
-                                <img src="image/IC_2 (2).jpg" class="img_2">
+                                <img src="#" class="img_2">
                               </div>
                               <div class="carousel-item">
-                                <img src="image/IC_2 (3).jpg" class="img_3">
-                              </div>
+                                <img src="#" class="img_3">
+                            </div>
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="prev">
                               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -331,17 +351,15 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body modal-2-text">
-                    <p>Как установить Industrial Craft 2</p>
-                    <p>1.  Скачай и установи Minecraft Forge</p>
-                    <p>2.  Скачай мод</p>
-                    <p>3.  Не распаковывая, скопируй в .minecraft\mods</p>
-                    <p>4.  Готово</p>
- 
-                    <p>Скачать на скачивание сайта:</p>
-                    <a class="btn btn-primary" href="https://minecraft-inside.ru/download/165350/" role="button">Скачать мод</a>
-                    </div>
-                    <div class="modal-footer">
-                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Информация по моду</button>
+                        <p1>Как установить модификацию себе на пк?</p1>
+                        <p>1.  Скачай и установи Minecraft Forge</p>
+                        <p>2.  Скачай мод</p>
+                        <p>3.  Не распаковывая, скопируй в .minecraft\mods</p>
+                        <p>4.  Готово</p>
+    
+                        <p>Скачать на скачивание сайта:</p>
+
+                        <a class="btn btn-primary" href="#" role="button" id = "download">Скачать мод</a>
                     </div>
                 </div>
                 </div>
@@ -352,23 +370,227 @@
 
             <script>
                 function IC_2(param) {
-                    var button_1 = document.querySelector('button_1')
-                    var model_tetx = document.querySelector('.modal-1-text p')
-                    var model_tetx = document.querySelector('.modal-2-text p')
+                    var button_1 = document.querySelector('button')
+                    var model_title = document.querySelector('.modal-title h5')
+                    var model_text_1 = document.querySelector('.modal-1-text p')
+                    var img_1 = document.querySelector('.img_1')
+                    var img_2 = document.querySelector('.img_2')
+                    var img_3 = document.querySelector('.img_3')
+
+                    document.getElementById("download").href="https://minecraft-inside.ru/download/165350/";
+                    model_title.innerText = " Industrial Craft 2"
+                    img_1.src = "image/IC_2 (1).jpg"
+                    img_2.src = "image/IC_2 (2).jpg"
+                    img_3.src = "image/IC_2 (3).jpg"
+                    model_text_1.innerText = "Большой и старый технический мод, который дарит игроку множество работающих на электричестве механизмов для самых разных сфер игровой жизни, включая добычу руд, обработку ресурсов и  управление сельским хозяйством."
+                    
                 }
+
                 function IE(param) {
-                    var button_1 = document.querySelector('button_2')
+                    var model_text_2 = document.querySelector('.modal-2-text a')
+                    var button_1 = document.querySelector('button')
+                    var model_title = document.querySelector('.modal-title h5')
                     var model_text_1 = document.querySelector('.modal-1-text p')
                     var model_text_2 = document.querySelector('.modal-2-text p')
                     var img_1 = document.querySelector('.img_1')
                     var img_2 = document.querySelector('.img_2')
                     var img_3 = document.querySelector('.img_3')
+                    document.getElementById("download").href="https://minecraft-inside.ru/download/154066/";
+                    model_title.innerText ="Immersive Engineering"
                     img_1.src = "image/IE_1.jpg"
                     img_2.src = "image/IE_2.png"
                     img_3.src = "image/IE_3.png"
                     model_text_1.innerText = 'Качественный индустриальный мод, основанный на реалистичных инструментах и машинах. Вместо светящейся красной пыли он предлагает использовать провода; вместо одного блока, который магически превращает руду в пыль, этот мод предлагает мультиблоковую (5x3x3) дробилку. Кроме того, мод обладает красивыми текстурами, добавляющими в игру шарм ретро-футуризма.'
+
+                }
+
+                function BC(param) {
+                    var button_1 = document.querySelector('button')
+                    var model_title = document.querySelector('.modal-title h5')
+                    var model_text_1 = document.querySelector('.modal-1-text p')
+                    var img_1 = document.querySelector('.img_1')
+                    var img_2 = document.querySelector('.img_2')
+                    var img_3 = document.querySelector('.img_3')
+
+                    document.getElementById("download").href="https://minecraft-inside.ru/download/175174/";
+                    model_title.innerText = "BuildCraft"
+                    img_1.src = "image/BC_1.jpg"
+                    img_2.src = "image/BC_2.jpg"
+                    img_3.src = "image/BC_3.jpg"
+                    model_text_1.innerText = "Мод добавит большое количество различных полезных механизмов в игру, например появятся двигатели, буровые устаноки и лазеры."
+                    
+                }
+
+                function TE(param) {
+                    var button_1 = document.querySelector('button')
+                    var model_title = document.querySelector('.modal-title h5')
+                    var model_text_1 = document.querySelector('.modal-1-text p')
+                    var img_1 = document.querySelector('.img_1')
+                    var img_2 = document.querySelector('.img_2')
+                    var img_3 = document.querySelector('.img_3')
+
+                    document.getElementById("download").href="https://minecraft-inside.ru/download/151776/";
+                    model_title.innerText = "Thermal Expansion"
+                    img_1.src = "image/TE_1.jpg"
+                    img_2.src = "image/TE_2.jpg"
+                    img_3.src = "image/TE_3.jpg"
+                    model_text_1.innerText = "Один из популярных технических модов, добавляет в игру различные механизмы для автоматизации сбора, обработки и хранения ресурсов/энергии."
+                    
+                }
+
+                function GC(param) {
+                    var button_1 = document.querySelector('button')
+                    var model_title = document.querySelector('.modal-title h5')
+                    var model_text_1 = document.querySelector('.modal-1-text p')
+                    var img_1 = document.querySelector('.img_1')
+                    var img_2 = document.querySelector('.img_2')
+                    var img_3 = document.querySelector('.img_3')
+
+                    document.getElementById("download").href="https://minecraft-inside.ru/download/169260/";
+                    model_title.innerText = "Galacticraft"
+                    img_1.src = "image/GC_1.jpg"
+                    img_2.src = "image/GC_2.jpg"
+                    img_3.src = "image/GC_3.jpg"
+                    model_text_1.innerText = "Наверное самый популярный мод на ракеты и космос для майнкрафт, с его нововведениями можно будет построить многоуровневую ракету и отправиться в путешествие на другие планеты, изучать их, строить космические станции."
+                    
+                }
+
+                function JEI(param) {
+                    var button_1 = document.querySelector('button')
+                    var model_title = document.querySelector('.modal-title h5')
+                    var model_text_1 = document.querySelector('.modal-1-text p')
+                    var img_1 = document.querySelector('.img_1')
+                    var img_2 = document.querySelector('.img_2')
+                    var img_3 = document.querySelector('.img_3')
+
+                    document.getElementById("download").href="https://minecraft-inside.ru/download/192743/";
+                    model_title.innerText = "Just Enough Items (JEI)"
+                    img_1.src = "image/JEI_1.jpg"
+                    img_2.src = "image/JEI_2.jpg"
+                    img_3.src = "image/JEI_3.jpg"
+                    model_text_1.innerText = "Этот мод является аналогом NEI и TMI, с его помощью вы сможете получить игровые предметы и посмотреть рецепты предметов и блоков из майнкрафт. "
+                    
                 }
                 
             </script>
+        </div>
+
+        <div class="contanier-text">
+            <div class="heading">
+                <h1 class="heading-ie" id="item-3">
+                    <span>
+
+                        Галерея сервера
+                        
+                    </span>
+                </h1>
+
+                
+            </div>
+
+            
+
+        </div>
+
+        <div class="contenier-image">
+            <div class="effects" id="statya">
+                <img src="image/index.jpg" data-bs-toggle="tooltip" alt="">
+                <div>
+                    <p>geektarget.ru</p>
+                </div>
+            </div>
+            
+            <div class="effects" id="statya">
+                <img src="image/skyland.jpg" data-bs-toggle="tooltip" alt="">
+                <div>
+                    <p>victorycraft.ru</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contenier-image">
+            <div class="effects" id="statya">
+                <img src="image/order_mc_img10.jpg" data-bs-toggle="tooltip" alt="">
+                <div>
+                    <p>myarena.ru</p>
+                </div>
+            </div>
+            
+            <div class="effects" id="statya">
+                <img src="image/order_mc_img7.jpg" data-bs-toggle="tooltip" alt="">
+                <div>
+                    <p>myarena.ru</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contenier-image">
+            <div class="effects" id="statya">
+                <img src="image/order_mc_img8.jpg" data-bs-toggle="tooltip" alt="">
+                <div>
+                    <p>myarena.ru</p>
+                </div>
+            </div>
+            
+            <div class="effects" id="statya">
+                <img src="image/order_mc_img9.jpg" data-bs-toggle="tooltip" alt="">
+                <div>
+                    <p>myarena.ru</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contanier-text">
+            <div class="heading">
+                <h1 class="heading-ie" id="item-4">
+                    <span>
+
+                        Таблица участвующих людей в beta-test
+                        
+                    </span>
+                </h1>
+
+                <iframe referrerpolicy="no-referrer-when-downgrade"
+                height="740px" width="100%" style="border:none;"
+                src="https://view-awesome-table.com/-MzoEn9T56hH-3NIavai/view">
+                </iframe>
+            </div>
+        </div>
+
+        
+        <div class="contanier-text">
+            <div class="heading">
+                <h1 class="heading-ie" >
+                    <span>
+
+
+                        <div class="btn-group" role="group" aria-label="Button group with nested dropdown" >
+                            <a id="btnGroupDrop1" type="button" class="btn btn-primary" href="https://blitztest.ru/user/register">
+                                Запись на beta-test
+                            </a>
+                          
+                            
+                            <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            Контакты партнеров
+                            </button>
+                              <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                <li><a class="dropdown-item" href="https://vk.com/FEDCDOMinecraft">VK</a></li>
+                                <li><a class="dropdown-item" href="https://t.me/FEDCDOMinecraft">Telegramm</a></li>
+                                <li><a class="dropdown-item" href="https://discord.gg/8kpuuzG4jU">Discord</a></li>
+                              </ul>
+                        </div>
+                        
+                    </span>
+                </h1>
+
+                
+            </div>
+
+            
+
+        </div>
+
+        
+
     </body>
 </html>
